@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>הצטרפות מרצים | יוניק הרצאות</title>
+<meta name="description" content="עמוד מרצה בתוך אתר שנמצא בעמוד הראשון בגוגל בעשרות ביטויי חיפוש של מרצים והרצאות.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="יוניק הרצאות | הצטרפות מרצים">
+<meta property="og:description" content="כשמחפשים מרצה בגוגל, תבדקו מה רואים. עמוד מרצה בתוך אתר שכבר מדורג.">
+<meta property="og:image" content="/founder.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23BE1110'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>U</text></svg>">
+<style>
+:root{
+  --paper:#FCFBF7; --card:#FFFFFF; --ink:#1C2130; --ink2:#535D70;
+  --red:#BE1110; --line:#E7E3D8; --green:#1E7A46;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Heebo,-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:17px}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px}
+.topbar{border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:20}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+.brand{font-weight:800;font-size:19px}
+.brand small{display:block;font-weight:400;font-size:12.5px;color:var(--ink2);line-height:1.2}
+.topbar .cta-mini{background:var(--red);color:#fff;text-decoration:none;font-weight:700;font-size:15px;padding:9px 18px;border-radius:10px}
+.accentbar{height:6px;background:var(--red);width:180px;border-radius:0 0 4px 4px}
+section{padding:44px 0}
+h2{font-size:30px;font-weight:800;letter-spacing:-.5px;line-height:1.25;margin-bottom:14px}
+.lead-open{font-size:24px;font-weight:700;line-height:1.45;margin:26px 0 6px}
+.lead-open b{color:var(--red)}
+.rank-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:22px 0 8px}
+@media(min-width:640px){.rank-grid{grid-template-columns:repeat(4,1fr)}}
+.rank-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 12px;text-align:center}
+.rank-card .pos{display:inline-block;font-size:13px;font-weight:700;color:var(--green);background:#E9F5EE;border-radius:99px;padding:2px 10px;margin-bottom:8px}
+.rank-card .pos.p1{color:#fff;background:var(--green)}
+.rank-card strong{display:block;font-size:15.5px;line-height:1.35}
+.summary{display:flex;gap:14px;justify-content:center;background:var(--ink);color:#fff;border-radius:16px;padding:18px 12px;margin:18px 0;text-align:center;flex-wrap:wrap}
+.summary div{flex:1;min-width:140px}
+.summary strong{display:block;font-size:22px;font-weight:800}
+.summary span{font-size:14px;opacity:.85}
+details.allterms{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:10px 0}
+details.allterms summary{cursor:pointer;font-weight:700;padding:15px 18px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details.allterms summary::after{content:"+";font-size:22px;color:var(--red);font-weight:800}
+details.allterms[open] summary::after{content:"×"}
+.terms-list{padding:0 18px 14px}
+.terms-list div{display:flex;justify-content:space-between;padding:8px 0;border-top:1px dashed var(--line);font-size:15.5px}
+.terms-list strong{color:var(--green);font-weight:700;white-space:nowrap;margin-right:12px}
+.method{font-size:13.5px;color:var(--ink2);margin-top:10px}
+.verify{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-top:22px}
+.verify p{font-weight:700;margin-bottom:12px}
+.verify-btns{display:flex;flex-wrap:wrap;gap:10px}
+.verify-btns a{border:1.5px solid var(--ink);border-radius:99px;padding:8px 16px;text-decoration:none;color:var(--ink);font-weight:700;font-size:14.5px}
+.verify-btns a:hover{background:var(--ink);color:#fff}
+.why{border-right:4px solid var(--red);background:var(--card);border-radius:12px;padding:18px 20px;margin-top:8px}
+.why h3{font-size:20px;margin-bottom:6px}
+.benefits{list-style:none;margin:16px 0}
+.benefits li{padding:9px 30px 9px 0;position:relative}
+.benefits li::before{content:"";position:absolute;right:0;top:16px;width:18px;height:18px;background:var(--green);border-radius:50%;
+  mask:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='4'><path d='M4 12l5 5L20 6'/></svg>") center/contain no-repeat;
+  -webkit-mask:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='4'><path d='M4 12l5 5L20 6'/></svg>") center/contain no-repeat}
+.sample-link{color:var(--red);font-weight:700}
+.founder{display:flex;gap:22px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;align-items:flex-start;flex-wrap:wrap}
+.founder img{width:150px;border-radius:14px;flex:none}
+.founder-txt{flex:1;min-width:230px}
+.founder-txt .eyebrow{color:var(--red);font-weight:700;font-size:14px;margin-bottom:4px}
+.founder-facts{display:flex;gap:16px;margin-top:12px;flex-wrap:wrap;font-size:14.5px;color:var(--ink2);font-weight:500}
+.price-box{background:var(--ink);color:#fff;border-radius:20px;padding:30px 24px;text-align:center}
+.price-box .big{font-size:34px;font-weight:800;line-height:1.2}
+.price-box .big b{color:#FF6B6A}
+.price-box .sub{font-size:17px;opacity:.9;margin-top:6px}
+.price-notes{display:grid;gap:10px;margin-top:18px;text-align:right}
+.price-notes div{background:rgba(255,255,255,.07);border-radius:12px;padding:12px 16px;font-size:15.5px}
+.scarcity{margin-top:14px;font-size:15px;background:rgba(190,17,16,.25);border:1px solid rgba(255,107,106,.4);border-radius:12px;padding:12px 16px}
+.choice{display:grid;gap:18px;margin-top:26px}
+@media(min-width:700px){.choice{grid-template-columns:1fr 1fr}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.panel h3{font-size:20px;margin-bottom:12px}
+.panel label{display:block;font-weight:700;font-size:14.5px;margin:12px 0 5px}
+.panel input[type=text],.panel input[type=tel]{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;font-family:inherit;font-size:16px;background:#FDFDFB}
+.panel input:focus{outline:2px solid var(--ink);border-color:var(--ink)}
+.consent{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;color:var(--ink2);margin-top:14px}
+.consent input{margin-top:4px}
+.btn-red{display:block;width:100%;background:var(--red);color:#fff;border:0;border-radius:12px;font-family:inherit;font-size:18px;font-weight:800;padding:15px;cursor:pointer;margin-top:16px}
+.btn-red:disabled{opacity:.6}
+.btn-wa{display:flex;align-items:center;justify-content:center;gap:10px;background:#25D366;color:#fff;text-decoration:none;border-radius:12px;font-size:18px;font-weight:800;padding:15px;margin-top:16px}
+.wa-note{font-size:14.5px;color:var(--ink2);margin-top:10px;text-align:center}
+.phone-line{text-align:center;margin-top:12px;font-weight:700}
+.phone-line a{color:var(--ink);text-decoration:none}
+.form-msg{margin-top:12px;font-weight:700;font-size:15px;display:none}
+.form-msg.ok{display:block;color:var(--green)}
+.form-msg.err{display:block;color:var(--red)}
+details.faq{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:10px}
+details.faq summary{cursor:pointer;font-weight:700;padding:14px 16px;list-style:none;display:flex;justify-content:space-between;gap:10px}
+details.faq summary::after{content:"+";color:var(--red);font-weight:800;font-size:20px}
+details.faq[open] summary::after{content:"×"}
+details.faq p{padding:0 16px 14px;color:var(--ink2)}
+footer{border-top:1px solid var(--line);padding:26px 0 110px;color:var(--ink2);font-size:14px}
+footer .brand{color:var(--ink)}
+.sticky{position:fixed;bottom:0;right:0;left:0;background:#fff;border-top:1px solid var(--line);padding:10px 14px;display:flex;gap:10px;z-index:30}
+.sticky a{flex:1;text-align:center;text-decoration:none;font-weight:800;font-size:16px;padding:12px;border-radius:11px}
+.sticky .s-form{background:var(--red);color:#fff}
+.sticky .s-wa{background:#25D366;color:#fff}
+@media(min-width:900px){.sticky{display:none} footer{padding-bottom:26px}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap">
+    <div class="brand">יוניק הרצאות<small>נבחרת המרצים של ישראל</small></div>
+    <a class="cta-mini" href="#join">להצטרפות</a>
+  </div>
+</div>
+<div class="wrap"><div class="accentbar"></div></div>
+
+<section id="proof">
+  <div class="wrap">
+    <p class="lead-open">כשחברות, ארגונים ואנשים מחפשים מרצים כל יום בגוגל, תבדקו מה הם רואים:</p>
+    <div class="rank-grid">
+      <div class="rank-card"><span class="pos p1">מקום ראשון</span><strong>״מרצים לנשים״</strong></div>
+      <div class="rank-card"><span class="pos p1">מקום ראשון</span><strong>״הרצאות לעובדים״</strong></div>
+      <div class="rank-card"><span class="pos p1">מקום ראשון</span><strong>״הרצאות על מכירות״</strong></div>
+      <div class="rank-card"><span class="pos p1">מקום ראשון</span><strong>״הרצאות מדעיות״</strong></div>
+      <div class="rank-card"><span class="pos">מקום שני</span><strong>״הרצאות על שכנוע״</strong></div>
+      <div class="rank-card"><span class="pos">מקום שני</span><strong>״מרצים מרתקים״</strong></div>
+      <div class="rank-card"><span class="pos">מקום שני</span><strong>״הרצאות על זוגיות״</strong></div>
+      <div class="rank-card"><span class="pos">מקום שלישי</span><strong>״מרצים מעניינים״</strong></div>
+    </div>
+
+    <div class="summary">
+      <div><strong>24 מתוך 24</strong><span>ביטויים שנבדקו נמצאים בעמוד הראשון בגוגל</span></div>
+      <div><strong>18 מתוך 24</strong><span>בשלושת המקומות הראשונים</span></div>
+    </div>
+
+    <details class="allterms">
+      <summary>הצג את כל 24 הביטויים והמיקומים</summary>
+      <div class="terms-list">
+        <div><span>הרצאות על מכירות</span><strong>מקום ראשון</strong></div>
+        <div><span>מרצים לנשים</span><strong>מקום ראשון</strong></div>
+        <div><span>הרצאות לעובדים</span><strong>מקום ראשון</strong></div>
+        <div><span>הרצאות מדעיות</span><strong>מקום ראשון</strong></div>
+        <div><span>הרצאות על שכנוע</span><strong>מקום שני</strong></div>
+        <div><span>הרצאות לגיל השלישי</span><strong>מקום שני</strong></div>
+        <div><span>מרצים מרתקים</span><strong>מקום שני</strong></div>
+        <div><span>מרצה מעניין</span><strong>מקום שני</strong></div>
+        <div><span>מרצים מצחיקים</span><strong>מקום שני</strong></div>
+        <div><span>מרצים על אושר</span><strong>מקום שני</strong></div>
+        <div><span>הרצאות על זוגיות</span><strong>מקום שני</strong></div>
+        <div><span>הרצאות לאירועים</span><strong>מקום שני</strong></div>
+        <div><span>מרצים על מדע</span><strong>מקום שני</strong></div>
+        <div><span>מרצים לחינוך</span><strong>מקום שני</strong></div>
+        <div><span>מרצים מעניינים</span><strong>מקום שלישי</strong></div>
+        <div><span>הרצאות על תקשורת בין אישית</span><strong>מקום שלישי</strong></div>
+        <div><span>הרצאות מעולות</span><strong>מקום שלישי</strong></div>
+        <div><span>מרצים לחברות וארגונים</span><strong>מקום שלישי</strong></div>
+        <div><span>הרצאות על אקטואליה</span><strong>מקום רביעי</strong></div>
+        <div><span>הרצאות להעצמה אישית</span><strong>מקום חמישי</strong></div>
+        <div><span>הרצאות לכנסים</span><strong>מקום חמישי</strong></div>
+        <div><span>הרצאות מומלצות</span><strong>מקום חמישי</strong></div>
+        <div><span>הרצאות על שיווק ופרסום</span><strong>מקום שישי</strong></div>
+        <div><span>הרצאות על משא ומתן</span><strong>מקום שמיני</strong></div>
+      </div>
+    </details>
+    <p class="method">בדיקה ידנית בגוגל ישראל בגלישה בסתר, 7.8.2026. מיקומים אורגניים עשויים להשתנות לפי זמן, מיקום ומכשיר.</p>
+
+    <div class="verify">
+      <p>אל תסתפק במה שאנחנו אומרים. פתח גוגל וחפש בעצמך, עכשיו:</p>
+      <div class="verify-btns">
+        <a href="https://www.google.co.il/search?q=%D7%9E%D7%A8%D7%A6%D7%99%D7%9D+%D7%9C%D7%A0%D7%A9%D7%99%D7%9D" target="_blank" rel="noreferrer">מרצים לנשים</a>
+        <a href="https://www.google.co.il/search?q=%D7%94%D7%A8%D7%A6%D7%90%D7%95%D7%AA+%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D" target="_blank" rel="noreferrer">הרצאות לעובדים</a>
+        <a href="https://www.google.co.il/search?q=%D7%94%D7%A8%D7%A6%D7%90%D7%95%D7%AA+%D7%A2%D7%9C+%D7%9E%D7%9B%D7%99%D7%A8%D7%95%D7%AA" target="_blank" rel="noreferrer">הרצאות על מכירות</a>
+      </div>
+    </div>
+
+    <div class="why" style="margin-top:22px">
+      <h3>למה כבר מחר?</h3>
+      <p>עמוד המרצה שלך נכנס לתוך עמודי האתר שכבר מדורגים בגוגל. מהרגע שהעמוד עולה, לקוח שמחפש מרצה בתחום שלך ונוחת באתר רואה אותך שם. לא צריך לחכות שגוגל תדרג עמוד חדש.</p>
+    </div>
+  </div>
+</section>
+
+<section id="what" style="padding-top:0">
+  <div class="wrap">
+    <h2>מה מקבלים?</h2>
+    <p>נכס מקצועי שמציג אותך בדיוק ברגע שבו לקוחות מחפשים מרצה.</p>
+    <ul class="benefits">
+      <li>עמוד מרצה אישי עם תמונה, ביוגרפיה מקצועית ופרטי קשר</li>
+      <li>עמודים מסודרים לכל ההרצאות שלך, בניסוח שיווקי שנאשר יחד</li>
+      <li>הופעה במאגר המרצים ובעמודי הנושא הרלוונטיים באתר</li>
+      <li>הטלפון שלך מוצג, כדי שפניות מתאימות יגיעו ישירות אליך</li>
+      <li>נוכחות למשך שנתיים, בלי לנהל קמפיין חודשי משלך</li>
+    </ul>
+    <a class="sample-link" href="https://www.unique-lectures.co.il/lecturers/%D7%A6%D7%91%D7%99%D7%A7%D7%94_%D7%99%D7%95%D7%92%D7%91/" target="_blank" rel="noreferrer">צפה בדוגמה לעמוד מרצה פעיל באתר</a>
+  </div>
+</section>
+
+<section id="founder" style="padding-top:10px">
+  <div class="wrap">
+    <div class="founder">
+      <img src="founder.jpg" alt="צביקה יוגב, מייסד יוניק הרצאות" width="150" height="281">
+      <div class="founder-txt">
+        <p class="eyebrow">אולי אנחנו כבר מכירים</p>
+        <h2 style="font-size:26px">אני צביקה יוגב</h2>
+        <p>כבר כ-23 שנים אני מלמד באקדמיה את הקורס ״תורת השכנוע״ והרציתי בפני עשרות אלפי סטודנטים, חברות וארגונים. אני מכיר מקרוב את האתגר של מרצה מצוין שלא תמיד נמצא במקום שבו מחפשים אותו.</p>
+        <p style="margin-top:8px">את יוניק הרצאות בנינו וקידמנו במשך כעשור. המטרה פשוטה: לתת למספר מוגבל של מרצים עמוד מקצועי בתוך אתר שכבר צבר נוכחות משמעותית בגוגל.</p>
+        <div class="founder-facts"><span>כ-23 שנות הוראה</span><span>שני ספרים על שכנוע והשפעה</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="price" style="padding-top:6px">
+  <div class="wrap">
+    <div class="price-box">
+      <div class="big"><b>2,900 שקלים + מע״מ</b> למשך שנתיים</div>
+      <div class="sub">בתשלום אחד. כלומר בערך 121 שקלים בחודש.</div>
+      <div class="price-notes">
+        <div>ללא תשלום לקליקים, לא ממומן ולא לידים. עמוד קבוע באתר.</div>
+        <div>עמלת הצלחה של 10 אחוזים משולמת רק על הרצאה שהגיעה אליך דרך האתר. כלומר רק אחרי שהאתר כבר עבד בשבילך.</div>
+        <div>אתה קובע לבד את מחיר ההרצאה שלך, ויכול לשקלל בו מראש את העמלה.</div>
+      </div>
+      <div class="scarcity">כדי לא לדלל את החשיפה והפניות של מי שכבר בפנים, ההצטרפות נסגרת בהגעה לכ-50 מרצים פעילים.</div>
+    </div>
+  </div>
+</section>
+
+<section id="join" style="padding-top:8px">
+  <div class="wrap">
+    <h2>רוצה להיות במקום שבו מחפשים מרצים?</h2>
+    <p>בחר את הדרך הנוחה לך. נחזור אליך לשיחת התאמה קצרה ונבדוק יחד אם זה מתאים.</p>
+    <div class="choice">
+      <div class="panel">
+        <h3>השאר פרטים ונחזור אליך</h3>
+        <form id="leadform">
+          <label for="f-name">שם מלא</label>
+          <input type="text" id="f-name" name="name" autocomplete="name" required>
+          <label for="f-phone">טלפון נייד</label>
+          <input type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel" required>
+          <div class="consent">
+            <input type="checkbox" id="f-consent" required>
+            <label for="f-consent" style="font-weight:400;margin:0">אני מאשר שיחזרו אליי בטלפון או בהודעה בנושא ההצטרפות. הפרטים ישמשו רק לצורך זה.</label>
+          </div>
+          <button class="btn-red" type="submit" id="f-btn">שלח ונחזור אליך</button>
+          <p class="form-msg" id="f-msg"></p>
+        </form>
+      </div>
+      <div class="panel">
+        <h3>מעדיף לכתוב עכשיו בוואטסאפ?</h3>
+        <p style="color:var(--ink2)">כתוב לנו ישירות ונענה לך במהירות.</p>
+        <a class="btn-wa" id="wa-btn" href="https://wa.me/972586655838?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%93%D7%A3%20%D7%94%D7%94%D7%A6%D7%98%D7%A8%D7%A4%D7%95%D7%AA%20%D7%9C%D7%99%D7%95%D7%A0%D7%99%D7%A7%20%D7%94%D7%A8%D7%A6%D7%90%D7%95%D7%AA%20%D7%95%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%91%D7%93%D7%95%D7%A7%20%D7%90%D7%9D%20%D7%96%D7%94%20%D7%9E%D7%AA%D7%90%D7%99%D7%9D%20%D7%9C%D7%99" target="_blank" rel="noreferrer">שליחת הודעה בוואטסאפ</a>
+        <p class="wa-note">עונים בשעות הפעילות, בדרך כלל תוך זמן קצר.</p>
+        <p class="phone-line">או בטלפון: <a href="tel:+972586655838">058-665-5838</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <h2>שאלות שמרצים שואלים</h2>
+    <details class="faq"><summary>איך לקוחות מגיעים לעמוד שלי?</summary><p>הם מחפשים הרצאה או מרצה בגוגל, מגיעים ליוניק הרצאות, ומשם עוברים לעמוד שלך לפי התחום וההרצאות.</p></details>
+    <details class="faq"><summary>לכמה זמן העמוד נשאר באתר?</summary><p>המחיר כולל נוכחות למשך שנתיים מלאות.</p></details>
+    <details class="faq"><summary>האם כל מרצה מתקבל?</summary><p>לא. לפני ההצטרפות מתקיימת שיחת התאמה קצרה כדי לשמור על איכות המאגר ועל התאמה לתחומי האתר.</p></details>
+    <details class="faq"><summary>האם יש אפשרות לקבל בולטות נוספת?</summary><p>קיימת אפשרות מוגבלת להשתלב גם באזור המרצים המתחלף באתר. פרטים על מסלול הבולטות יימסרו בשיחת ההתאמה.</p></details>
+    <details class="faq"><summary>האם מובטח מספר מסוים של הזמנות?</summary><p>אי אפשר להבטיח מראש מספר הזמנות. מה שכן אפשר, ובשקיפות מלאה, זה להראות את הנוכחות הקיימת של האתר בגוגל ואת הנכס המקצועי שתקבל בתוכו.</p></details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand" style="margin-bottom:6px">יוניק הרצאות<small>נבחרת המרצים של ישראל</small></div>
+    <p>הפרטים שתשאיר ישמשו רק לצורך חזרה אליך בנושא ההצטרפות.</p>
+    <p style="margin-top:4px"><a href="https://www.unique-lectures.co.il/" target="_blank" rel="noreferrer" style="color:var(--ink2)">לאתר יוניק הרצאות</a></p>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a class="s-form" href="#join">להשארת פרטים</a>
+  <a class="s-wa" id="wa-sticky" href="https://wa.me/972586655838?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%93%D7%A3%20%D7%94%D7%94%D7%A6%D7%98%D7%A8%D7%A4%D7%95%D7%AA%20%D7%9C%D7%99%D7%95%D7%A0%D7%99%D7%A7%20%D7%94%D7%A8%D7%A6%D7%90%D7%95%D7%AA%20%D7%95%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%91%D7%93%D7%95%D7%A7%20%D7%90%D7%9D%20%D7%96%D7%94%20%D7%9E%D7%AA%D7%90%D7%99%D7%9D%20%D7%9C%D7%99" target="_blank" rel="noreferrer">וואטסאפ</a>
+</div>
+<script>
+var PIXEL_ID = "PIXEL_ID_PLACEHOLDER";
+if (PIXEL_ID && PIXEL_ID.indexOf("PLACEHOLDER") === -1) {
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', PIXEL_ID);
+  fbq('track', 'PageView');
+}
+function track(ev){ if (window.fbq) { fbq('track', ev); } }
+
+document.getElementById('wa-btn').addEventListener('click', function(){ track('Contact'); });
+document.getElementById('wa-sticky').addEventListener('click', function(){ track('Contact'); });
+
+var form = document.getElementById('leadform');
+form.addEventListener('submit', async function(e){
+  e.preventDefault();
+  var btn = document.getElementById('f-btn');
+  var msg = document.getElementById('f-msg');
+  var name = document.getElementById('f-name').value.trim();
+  var phone = document.getElementById('f-phone').value.trim();
+  var consent = document.getElementById('f-consent').checked;
+  msg.className = 'form-msg';
+  if (!name || !phone || !consent) {
+    msg.textContent = 'צריך שם, טלפון ואישור חזרה.';
+    msg.className = 'form-msg err';
+    return;
+  }
+  btn.disabled = true; btn.textContent = 'שולח...';
+  try {
+    var src = 'Meta campaign' + (location.search ? ' ' + location.search.slice(0, 180) : '');
+    var r = await fetch('/api/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: name, phone: phone, consent: true,
+        source: src,
+        consentTimestamp: new Date().toISOString(),
+        policyVersion: '2026-08-31'
+      })
+    });
+    var data = await r.json();
+    if (data.ok) {
+      track('Lead');
+      form.reset();
+      msg.textContent = 'הפרטים נשלחו. נחזור אליך בהקדם.';
+      msg.className = 'form-msg ok';
+      btn.textContent = 'נשלח בהצלחה';
+    } else {
+      throw new Error(data.message || 'שגיאה');
+    }
+  } catch (err) {
+    msg.textContent = 'השליחה לא הצליחה כרגע. אפשר לנסות שוב או לכתוב לנו בוואטסאפ.';
+    msg.className = 'form-msg err';
+    btn.disabled = false; btn.textContent = 'שלח ונחזור אליך';
+  }
+});
+</script>
+</body>
+</html>
